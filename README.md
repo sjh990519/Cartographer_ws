@@ -411,5 +411,58 @@ $ rosrun rviz rviz
 ### :smile: 실행 화면 
 ![결과](https://user-images.githubusercontent.com/94280596/192163083-8313a2c5-f20c-4f03-9279-e7241a28e342.png)
 
+<br><br>
   
+#### 로봇 조종
+* 유저가 직접 로봇을 조정하며 SLAM 작업을 한다.
+* 로봇의 속도를 너무 급하게 바꾸거나 너무 빠른 속도로 전/후진 회전 하지 않도록 한다.
+* 계측할 환경의 세세하게 로봇이 돌아다니면서 스캔을 해야 정확하게 스캔이 가능하다.
+
+<br>
+
+*  [ Desktop ]
+```
+$ roslaunch kobuki_keyop keyop.launch
+```
+
+
+<br><br>
   
+#### Topic Data 저장
+* 로봇을 조종하면서 SLAM 작업을 진행하는데, 이떄 kobuki & kobuki_slam 패키지에서 발행하는 
+* /scan, /tf 토픽을 scan_data 이라는 파일명의 .bag 파일로 저장한다.
+* 추후 이 파일을 가지고 맵을 만들 수도 있으며, 맵핑작업시에 실험 당시의 /scan과 /tf 토픽 을 재현할 수 있다.
+
+<br>
+
+*  [ Desktop ]
+```
+$ rosbag record -O scan_data /scan /tf
+```
+```
+$ rqt_graph
+```
+
+<br><br>
+
+
+#### [ rqt_graph ]
+![Screenshot from 2022-09-26 05-09-36](https://user-images.githubusercontent.com/94280596/192163204-5f5fc017-c93d-4468-b19a-f8bd70161454.png)
+
+
+<br><br>
+  
+#### Map 저장
+* 로봇을 이동시키면 로봇의 오도메트리, tf 정보, 센서의 스캔 정보를 기반으로 맵이 작성된다.
+* 모든 작업이 완료 되었으며 map_saver 노드를 실행하여 맵을 작성한다.
+* 저장은 map_saver를 동작시킨 디렉토리에 저장된다.
+* 파일명은 따로 붙이지 않으면 [ map.pgm 파일명과 / map.yaml 파일명으로 저장된다. ]
+
+
+
+<br>
+
+*  [ Desktop ]
+```
+$ rosrun map_server map_saver
+```
