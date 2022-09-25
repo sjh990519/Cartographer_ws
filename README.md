@@ -49,7 +49,7 @@ $ sudo apt-get update
 $ sudo apt-get install -y python-wstool python-rosdep ninja-build stow
 ```
 
-<br>
+<br><br>
 
 - 도구 설치 후 새로운 Cartographer_ros 작업 공간을 생성한다.
 ```
@@ -60,7 +60,7 @@ $ wstool merge -t src https://raw.githubusercontent.com/cartographer-project/car
 $ wstool update -t src
 ```
 
-<br>
+<br><br>
 
 - Cartographer_ros 종속성 설치
 - rosdep 필요한 패키지를 설치한다.
@@ -71,7 +71,6 @@ $ rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO}
 
   # install 에러 시
 $ rosdep install --from-paths src --ignore-src --rosdistro=noetic -y
-
 ```
 
 
