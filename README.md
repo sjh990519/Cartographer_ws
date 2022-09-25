@@ -69,8 +69,7 @@ $ sudo rosdep init
 $ rosdep update
 $ rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO}
 
-rosdep install 에러 시
-
+  # rosdep install 에러 시
 $ $ rosdep install --from-paths src --ignore-src --rosdistro=noetic -y
 
 ```
