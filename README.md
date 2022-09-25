@@ -379,6 +379,7 @@ $ roscore
   
 #### :strawberry: Raspberry Pi
 ```
+$ roslaunch kobuki_node minimal.launch
 $ roslaunch hls_lfcd_lds_driver hlds_laser.launch 
 ```
   
@@ -400,7 +401,10 @@ $ rosrun rviz rviz
 - ADD : Map
 - ADD : TF
 - ADD : PointCloud2
-
+#### [Image]
+![add](https://user-images.githubusercontent.com/94280596/192163057-3820948c-8d01-4002-912b-aef43ab2e3db.png)
+  
+  
   
 <br><br>
   
