@@ -370,21 +370,21 @@ $ catkin_make
   
 ### :four: 실행
   
-#### Desktop
+#### :computer: Desktop
 ```  
 $ roscore
 ```
   
 <br>  
   
-#### Raspberry Pi
+#### :strawberry: Raspberry Pi
 ```
 $ roslaunch hls_lfcd_lds_driver hlds_laser.launch 
 ```
   
 <br>
   
-#### Desktop
+#### :computer: Desktop
 ```
 $ roslaunch slam my_robot.launch
 ```
