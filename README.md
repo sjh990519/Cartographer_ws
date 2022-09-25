@@ -282,12 +282,12 @@ return options
 - Cartographer Document 보고 수정 하면된다.
   
 - 수정 내용
-  tracking_frame = "base_link",   ---->   tracking_frame = "base_footprint",
-  published_frame = "base_link",   ---->   published_frame = "base_footprint",
-  provide_odom_frame = true,   ---->   provide_odom_frame = false,
-  publish_frame_projected_to_2d = false,   ---->   publish_frame_projected_to_2d = true,
-  use_odometry = false,   ---->   use_odometry = true,
-  num_multi_echo_laser_scans = 1,   ---->   num_multi_echo_laser_scans = 0,
+- tracking_frame = "base_link",   ---->   tracking_frame = "base_footprint",
+- published_frame = "base_link",   ---->   published_frame = "base_footprint",
+- provide_odom_frame = true,   ---->   provide_odom_frame = false,
+- publish_frame_projected_to_2d = false,   ---->   publish_frame_projected_to_2d = true,
+- use_odometry = false,   ---->   use_odometry = true,
+- num_multi_echo_laser_scans = 1,   ---->   num_multi_echo_laser_scans = 0,
   
   ADD
   TRAJECTORY_BUILDER_2D.use_imu_data = false
