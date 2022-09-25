@@ -98,7 +98,7 @@ $ catkin_make
 ### 3️⃣: Cartographer Custom
 - 자신의 로봇과 라이다센서에 맞게 커스텀 하는 작업  :white_check_mark:
 
-- 새로운 워크스페이스 만든 후 필요 없는 폴더 삭제 후 launch 폴더 & lau 폴더 생성
+- 1. 새로운 워크스페이스 만든 후 필요 없는 폴더 삭제 후 launch 폴더 & lau 폴더 생성
 ```
 $ mkdir catkin_ws/ src
 $ cd src
