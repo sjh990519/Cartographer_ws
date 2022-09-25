@@ -218,10 +218,25 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 ```
 
 
+<br><br><br><br>
 
 
+### my_robot.lua
+
+#### :blue_book: 원본 
+```
+
+```
+
+<br><br><br>
+
+#### :green_book: 수정
+- 수정 내용
 
 
+```
+
+```
 
 
 
