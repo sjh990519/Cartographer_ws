@@ -398,15 +398,15 @@ $ rosrun rviz rviz
   
 <br><br>
   
-#### Rviz 설정
+#### :sunrise: Rviz 설정
 - ADD : Map
 - ADD : TF
 - ADD : PointCloud2
 
   
+<br><br>
   
-  
-  
-  
+#### :simple_smile: 실행 화면 
+
   
   
