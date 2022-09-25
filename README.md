@@ -88,9 +88,6 @@ $ src/cartographer/scripts/install_abseil.sh
 $ sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
 ```
 
-
-<br><br><br>
-
 - 빌드하고 설치한다.
 ```
 $ catkin_make
