@@ -10,7 +10,7 @@
 <br><br><br>
 
 
-## :pushpin: Setting
+## :bell: Setting
 ### OS : Unbuntu 20.0.4 LTS, Rapbian Buster
 ### Ros : Noetic Ninjemys
 ### Robot : Kobuki (Yujinrobot),  Raspberry Pi 4 (Model B)
