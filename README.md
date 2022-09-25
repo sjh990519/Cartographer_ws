@@ -420,7 +420,7 @@ $ rosrun rviz rviz
 
 <br>
 
-*  [ Desktop ]
+#### :computer: Desktop
 ```
 $ roslaunch kobuki_keyop keyop.launch
 ```
@@ -435,7 +435,7 @@ $ roslaunch kobuki_keyop keyop.launch
 
 <br>
 
-*  [ Desktop ]
+#### :computer: Desktop
 ```
 $ rosbag record -O scan_data /scan /tf
 ```
@@ -462,7 +462,7 @@ $ rqt_graph
 
 <br>
 
-*  [ Desktop ]
+#### :computer: Desktop
 ```
 $ rosrun map_server map_saver
 ```
