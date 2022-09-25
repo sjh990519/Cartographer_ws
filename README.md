@@ -178,6 +178,13 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 <br><br><br>
 
 - :green_book: 수정
+- 수정 내용
+- TF 가 정의되어 있으므로 URDF 정의 부분 삭제
+- lua 파일을 새로 커스텀한 lua파일을 참조하도록 수정
+- <remap>부분을 자신의 센서 토픽에 맞게 수정
+  라이다 스캔 데이터의 경우
+  from -> scan,    to -> 토픽이름 
+
 ```
 <!--
   Copyright 2016 The Cartographer Authors
