@@ -429,7 +429,7 @@ $ roslaunch kobuki_keyop keyop.launch
 <br><br>
   
 #### Topic Data 저장
-* 로봇을 조종하면서 SLAM 작업을 진행하는데, 이떄 kobuki & kobuki_slam 패키지에서 발행하는 
+* 로봇을 조종하면서 SLAM 작업을 진행하는데, 이떄 kobuki & Cartographer_ros 패키지에서 발행하는 
 * /scan, /tf 토픽을 scan_data 이라는 파일명의 .bag 파일로 저장한다.
 * 추후 이 파일을 가지고 맵을 만들 수도 있으며, 맵핑작업시에 실험 당시의 /scan과 /tf 토픽 을 재현할 수 있다.
 
