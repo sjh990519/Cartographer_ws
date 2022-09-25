@@ -32,3 +32,32 @@
 ### :two: Building & Installation
 - Cartographer Ros를 빌드하려면 wstool & rosdep 이 필요로 한다.
 - 더 빠른 빌드를 위해서는 Ninja 를 사용하면 된다
+
+<br>
+
+- ROS Noetic이 있는 Ubuntu Focal
+```
+sudo apt-get update
+sudo apt-get install -y python3-wstool python3-rosdep ninja-build stow
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
