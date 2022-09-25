@@ -352,6 +352,29 @@ return options
 <br><br><br>
 
 ### Cartographer 패키지 서치 
+
+<br>
+
+#### test_ws
+```
+$ source devel_isolated/setup.bash
 ```
   
+<br>
+  
+#### catkin_ws/src
 ```
+$ catkin_init_worspace
+$ catkin_make
+```
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
