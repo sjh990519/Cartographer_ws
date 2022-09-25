@@ -96,7 +96,7 @@ $ catkin_make
 <br><br><br>
 
 ### 3️⃣: Cartographer Custom
-
+- 자신의 로봇과 라이다센서에 맞게 커스텀 하는 작업:white_check_mark:
 
 
 
