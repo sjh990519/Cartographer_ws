@@ -129,4 +129,4 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 
 <br><br><br>
 
-#### 복사한 launch & lua 파일을 자신의 로봇에 맞게 커스텀 한다.
+#### :repeat_one: 복사한 launch & lua 파일을 자신의 로봇에 맞게 커스텀 한다.
