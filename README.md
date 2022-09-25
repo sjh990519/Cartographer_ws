@@ -369,9 +369,25 @@ $ catkin_make
   
   
 ### :four: 실행
+  
+#### Desktop
 ```  
+$ roscore
+```
+  
+<br>  
+#### Raspberry Pi
+```
+$ roslaunch hls_lfcd_lds_driver hlds_laser.launch 
+```
+  
+<br>
+#### Desktop
+```
 $ roslaunch slam my_robot.launch
 ```
+  
+<br><br><br>
   
 #### Rviz 실행  
 ```
