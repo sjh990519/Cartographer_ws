@@ -391,14 +391,12 @@ $ roslaunch slam my_robot.launch
   
 <br><br><br>
   
-#### Rviz 실행  
+#### :sunrise: Rviz 실행  
 ```
 $ rosrun rviz rviz
 ```  
-  
-<br><br>
-  
-#### :sunrise: Rviz 설정
+
+#### Rviz 설정
 - ADD : Map
 - ADD : TF
 - ADD : PointCloud2
