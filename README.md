@@ -280,6 +280,8 @@ return options
 
 #### :green_book: 수정
 - Cartographer Document 보고 수정 하면된다.
+
+<br>
   
 - 수정 내용
 - tracking_frame = "base_link",   ---->   tracking_frame = "base_footprint",
@@ -289,8 +291,10 @@ return options
 - use_odometry = false,   ---->   use_odometry = true,
 - num_multi_echo_laser_scans = 1,   ---->   num_multi_echo_laser_scans = 0,
   
-  ADD
-  TRAJECTORY_BUILDER_2D.use_imu_data = false
+<br>
+  
+- ADD
+- TRAJECTORY_BUILDER_2D.use_imu_data = false
   
 ```
 -- Copyright 2016 The Cartographer Authors
