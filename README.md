@@ -133,7 +133,7 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 
 ### my_robot.launch
 
-- 원본 
+- :blue_book: 원본 
 ```
 <!--
   Copyright 2016 The Cartographer Authors
@@ -177,7 +177,7 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 
 <br><br><br>
 
-- 수정
+- :green_book: 수정
 ```
 <!--
   Copyright 2016 The Cartographer Authors
