@@ -352,14 +352,11 @@ return options
 <br><br><br>
 
 ### :mag: Cartographer 패키지 서치 
-
-<br>
-
 #### test_ws
 ```
 $ source devel_isolated/setup.bash
 ```
-  
+
 <br>
   
 #### catkin_ws/src
@@ -372,6 +369,23 @@ $ catkin_make
   
   
 ### :four: 실행
+```  
+$ roslaunch slam my_robot.launch
+```
+  
+#### Rviz 실행  
+```
+$ rosrun rviz rviz
+```  
+  
+<br><br>
+  
+#### Rviz 설정
+- ADD : Map
+- ADD : TF
+- ADD : PointCloud2
+
+  
   
   
   
