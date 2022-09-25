@@ -129,9 +129,9 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 
 <br><br><br>
 
-#### ::turtle: 복사한 launch & lua 파일을 자신의 로봇에 맞게 커스텀 한다.
+### :turtle: 복사한 launch & lua 파일을 자신의 로봇에 맞게 커스텀 한다.
 
-### my_robot.launch
+### :gift: my_robot.launch
 
 #### :blue_book: 원본 
 ```
@@ -221,7 +221,7 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 <br><br><br><br>
 
 
-### my_robot.lua
+### :gift: my_robot.lua
 
 #### :blue_book: 원본 
 ```
