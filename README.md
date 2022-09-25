@@ -7,7 +7,14 @@
 
 
 
+<br><br><br>
 
+
+##Setting
+### OS : Unbuntu 20.0.4 LTS, Rapbian Buster
+### Ros : Noetic Ninjemys
+### Robot : Kobuki (Yujinrobot),  Raspberry Pi 4 (Model B)
+### Sensor : 360 Laser Distance Sensor LDS-01 (Lidar_ROBOTIS)
 
 
 
