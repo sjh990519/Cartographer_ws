@@ -49,9 +49,16 @@ $ sudo apt-get update
 $ sudo apt-get install -y python-wstool python-rosdep ninja-build stow
 ```
 
+<br>
 
-
-
+- 도구 설치 후 새로운 Cartographer_ros 작업 공간을 생성한다.
+```
+$ mkdir test_ws
+$ cd test_ws
+$ wstool init src
+$ wstool merge -t src https://raw.githubusercontent.com/cartographer-project/cartographer_ros/master/cartographer_ros.rosinstall
+$ wstool update -t src
+```
 
 
 
