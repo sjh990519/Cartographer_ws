@@ -60,9 +60,20 @@ $ wstool merge -t src https://raw.githubusercontent.com/cartographer-project/car
 $ wstool update -t src
 ```
 
+<br>
 
+- Cartographer_ros 종속성 설치
+- rosdep 필요한 패키지를 설치한다.
+```
+$ sudo rosdep init
+$ rosdep update
+$ rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO}
 
+rosdep install 에러 시
 
+$ $ rosdep install --from-paths src --ignore-src --rosdistro=noetic -y
+
+```
 
 
 
