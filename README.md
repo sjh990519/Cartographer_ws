@@ -30,3 +30,5 @@
 <br>
 
 ### :two: Building & Installation
+- Cartographer Ros를 빌드하려면 wstool & rosdep 이 필요로 한다.
+- 더 빠른 빌드를 위해서는 Ninja 
