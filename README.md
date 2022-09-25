@@ -24,8 +24,9 @@
 <br>
 
 ### :one: Ros Version Check
-- 현재 지원 되는 버전은
+- 현재 지원 되는 버전
 - Kinetic
 - Melodic
 - Noetic
 
+### :two: Building & Installation
