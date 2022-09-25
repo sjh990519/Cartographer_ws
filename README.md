@@ -406,7 +406,7 @@ $ rosrun rviz rviz
   
 <br><br>
   
-### :simple_smile: 실행 화면 
+### :smile: 실행 화면 
 
   
   
