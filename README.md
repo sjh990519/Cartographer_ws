@@ -37,12 +37,16 @@
 
 - ROS Noetic이 있는 Ubuntu Focal
 ```
-sudo apt-get update
-sudo apt-get install -y python3-wstool python3-rosdep ninja-build stow
+$ sudo apt-get update
+$ sudo apt-get install -y python3-wstool python3-rosdep ninja-build stow
 ```
 
-
-
+<br>
+- 이전 배포판
+```
+$ sudo apt-get update
+$ sudo apt-get install -y python-wstool python-rosdep ninja-build stow
+```
 
 
 
