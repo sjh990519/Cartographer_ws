@@ -74,11 +74,16 @@ $ rosdep install --from-paths src --ignore-src --rosdistro=noetic -y
 ```
 
 
+<br><br><br>
 
+- Cartographer_ros 사용 시 수동으로 abseil-cpp 라이브러리르 수동으로 설치해야 한다.
+```
+$ src/cartographer/scripts/install_abseil.sh
+```
 
+<br>
 
-
-
-
-
-
+- 충돌하는 버전 시 수동으로 삭제한다.
+```
+$ sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
+```
