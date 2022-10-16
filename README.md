@@ -132,7 +132,7 @@ $ cp backpack_2d.lua /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 ### :turtle: 복사한 launch & lua 파일을 자신의 로봇에 맞게 커스텀 한다.
 
 
-#### :blue_book: 원본 [ backpack_2d.launch ]
+### :blue_book: 원본 [ backpack_2d.launch ]
 ```
 <launch>
   <param name="robot_description"
@@ -156,7 +156,7 @@ $ cp backpack_2d.lua /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 
 <br><br><br>
 
-#### :green_book: 수정
+### :green_book: 수정 [ my_robot.launch ]
 - 수정 내용
 - TF 가 정의되어 있으므로 URDF 정의 부분 삭제
 - lua 파일을 새로 커스텀한 lua파일을 참조하도록 수정
@@ -184,9 +184,7 @@ $ cp backpack_2d.lua /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 <br><br><br><br>
 
 
-### my_robot.lua
-
-#### :blue_book: 원본 [ backpack_2d.lua ]
+### :blue_book: 원본 [ backpack_2d.lua ]
 ```
 include "map_builder.lua"
 include "trajectory_builder.lua"
@@ -227,7 +225,7 @@ return options
 
 <br><br><br>
 
-#### :green_book: 수정
+### :green_book: 수정 [ my_robot.lua ]
 - Cartographer Document 보고 수정 하면된다.
 
 <br>
