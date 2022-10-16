@@ -338,7 +338,7 @@ $ rosrun rviz rviz
 - ADD : TF
 - ADD : PointCloud2
 #### [Image]
-![add](https://user-images.githubusercontent.com/94280596/192163057-3820948c-8d01-4002-912b-aef43ab2e3db.png)
+![rqt_graph](https://user-images.githubusercontent.com/94280596/196026789-dce951a8-74ab-4a36-868f-9210cb3a369a.png)
   
   
   
