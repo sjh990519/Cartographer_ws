@@ -123,7 +123,7 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/launch/my_robot.launch
 - lua
 ```
 $ cd ~/test_ws/src/cartographer_ros/cartographer_ros/configuation_files
-$ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
+$ cp backpack_2d.lua /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 ```
 
 
@@ -131,47 +131,26 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 
 ### :turtle: 복사한 launch & lua 파일을 자신의 로봇에 맞게 커스텀 한다.
 
-### my_robot.launch
 
-#### :blue_book: 원본 
+#### :blue_book: 원본 [ backpack_2d.launch ]
 ```
-<!--
-  Copyright 2016 The Cartographer Authors
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
--->
-
 <launch>
+  <param name="robot_description"
+    textfile="$(find cartographer_ros)/urdf/backpack_2d.urdf" />
 
-  <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" 
-    output="screen">
-    <param name="port" value="/dev/ttyLiDAR"/>
-    <param name="frame_id" value="laser"/>
-  </node> 
-  
-  <node pkg="kobuki_tf" type="kobuki_tf" name="kobuki_tf" output="screen">
-  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher"
+    type="robot_state_publisher" />
 
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
           -configuration_basename backpack_2d.lua"
       output="screen">
-    <remap from="laser" to="laser" />
+    <remap from="echoes" to="horizontal_laser_2d" />
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
-      type="cartographer_occupancy_grid_node" args="-resolution 0.02" />
+      type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
 </launch>
 ```
 
@@ -186,22 +165,6 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
   from -> scan,    to -> 토픽이름 
 
 ```
-<!--
-  Copyright 2016 The Cartographer Authors
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
--->
-
 <launch>
 
   <node name="cartographer_node" pkg="cartographer_ros"
@@ -209,11 +172,11 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
           -configuration_directory $(find slam)/lua
           -configuration_basename my_robot.lua"
       output="screen">
-    <remap from="laser" to="scan"/>
+    <remap from="scan" to="scan"/>
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
-      type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+      type="cartographer_occupancy_grid_node" args="-resolution 0.02" />
 </launch>
 ```
 
@@ -223,22 +186,8 @@ $ cp backpack_2d.launch /home/pray/catkin_ws/src/slam/lua/my_robot.lua
 
 ### my_robot.lua
 
-#### :blue_book: 원본 
+#### :blue_book: 원본 [ backpack_2d.lua ]
 ```
--- Copyright 2016 The Cartographer Authors
---
--- Licensed under the Apache License, Version 2.0 (the "License");
--- you may not use this file except in compliance with the License.
--- You may obtain a copy of the License at
---
---      http://www.apache.org/licenses/LICENSE-2.0
---
--- Unless required by applicable law or agreed to in writing, software
--- distributed under the License is distributed on an "AS IS" BASIS,
--- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
--- See the License for the specific language governing permissions and
--- limitations under the License.
-
 include "map_builder.lua"
 include "trajectory_builder.lua"
 
@@ -293,24 +242,7 @@ return options
   
 <br>
   
-- ADD
-- TRAJECTORY_BUILDER_2D.use_imu_data = false
-  
 ```
--- Copyright 2016 The Cartographer Authors
---
--- Licensed under the Apache License, Version 2.0 (the "License");
--- you may not use this file except in compliance with the License.
--- You may obtain a copy of the License at
---
---      http://www.apache.org/licenses/LICENSE-2.0
---
--- Unless required by applicable law or agreed to in writing, software
--- distributed under the License is distributed on an "AS IS" BASIS,
--- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
--- See the License for the specific language governing permissions and
--- limitations under the License.
-
 include "map_builder.lua"
 include "trajectory_builder.lua"
 
@@ -321,10 +253,10 @@ options = {
   tracking_frame = "base_footprint",
   published_frame = "base_footprint",
   odom_frame = "odom",
-  provide_odom_frame = false,
-  publish_frame_projected_to_2d = true,
-  use_pose_extrapolator = true,
-  use_odometry = true,
+  provide_odom_frame = true,
+  publish_frame_projected_to_2d = false,
+  use_pose_extrapolator = false,
+  use_odometry = false,
   use_nav_sat = false,
   use_landmarks = false,
   num_laser_scans = 1,
@@ -343,8 +275,14 @@ options = {
 }
 
 MAP_BUILDER.use_trajectory_builder_2d = true
-TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 7
+TRAJECTORY_BUILDER_2D.min_range = 0.1
+TRAJECTORY_BUILDER_2D.max_range = 10
 TRAJECTORY_BUILDER_2D.use_imu_data = false
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.1
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 0.1
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight = 1e-1
 
 return options
 ```
