@@ -336,15 +336,13 @@ $ rosrun rviz rviz
 #### Rviz 설정
 - ADD : Map
 - ADD : TF
-- ADD : PointCloud2
-#### [Image]
-![rqt_graph](https://user-images.githubusercontent.com/94280596/196026789-dce951a8-74ab-4a36-868f-9210cb3a369a.png)
-  
+- ADD : PointCloud2  
   
   
 <br><br>
   
 ### :smile: 실행 화면 
+#### YOUTUBE : https://youtu.be/wBjoO7pHt2k
 [![결과](https://user-images.githubusercontent.com/94280596/192163083-8313a2c5-f20c-4f03-9279-e7241a28e342.png)](https://user-images.githubusercontent.com/94280596/196027554-39ec5e14-a347-42ff-b8d4-a01646c03222.mp4)
 
 <br><br>
@@ -383,7 +381,7 @@ $ rqt_graph
 
 
 #### [ rqt_graph ]
-![Screenshot from 2022-09-26 05-09-36](https://user-images.githubusercontent.com/94280596/192163204-5f5fc017-c93d-4468-b19a-f8bd70161454.png)
+![rqt_graph](https://user-images.githubusercontent.com/94280596/196026789-dce951a8-74ab-4a36-868f-9210cb3a369a.png)
 
 
 <br><br>
